@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="NewBooking payment@hotel">
+  <parameter name="action" value="cash"></parameter>
+    <classes>
+      <class name="testcases.BookingManager">
+      <methods>
+      <include name="searchHotel"></include>
+      <include name="selectHotel"></include>
+      <include name="enterGuestInfo"></include>
+      </methods>
+      </class>
+      <class name="testcases.PaymentManager">
+      </class>
+      <class name="testcases.CustomerCommunication">
+      <methods>
+      <include name="checkEmailVerification"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <!-- <test thread-count="5" name="NewBooking payment@Digital">
+  <parameter name="action" value="digital"></parameter>
+    <classes>
+      <class name="testcases.BookingManager">
+      <methods>
+      <include name="searchHotel"></include>
+      <include name="selectHotel"></include>
+      <include name="enterGuestInfo"></include>
+      </methods>
+      </class>
+      <class name="testcases.PaymentManager">
+      </class>
+      <class name="testcases.CustomerCommunication">
+      <methods>
+      <include name="checkEmailVerification"></include>
+      </methods>
+      </class>
+    </classes> 
+  </test>  --> <!-- Test -->
+  
+  <!-- <test thread-count="5" name="UpdateBooking">
+  <parameter name="action" value="cash"></parameter>
+    <classes>
+      <class name="testcases.BookingManager">
+      <methods>
+      <include name="searchHotel"></include>
+      <include name="selectHotel"></include>
+      <include name="loadBooking"></include>
+      </methods>
+      </class>
+      <class name="testcases.PaymentManager">
+      </class>
+      <class name="testcases.CustomerCommunication">
+      <methods>
+      <include name="checkMobileVerification"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> --> <!-- Test -->
+</suite> <!-- Suite -->
